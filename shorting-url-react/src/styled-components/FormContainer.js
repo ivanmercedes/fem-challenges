@@ -10,14 +10,19 @@ export const FormContainer = styled.div`
 	background-image: url(${bgShorten});
 	background-size: cover;
 	width: 100%;
-	max-width: 650px;
+	max-width: 100%;
 	padding: 2.5rem;
 	justify-content: space-between;
 	border-radius: 5px;
 
 	input {
 		width: 100%;
-		max-width: 460px;
+		max-width: 90%;
+		font-size: 2rem;
+		@media (max-width: 568px) {
+			max-width: 100%;
+            font-size: 1.5rem;
+		}
 	}
 
 	@media (max-width: 568px) {

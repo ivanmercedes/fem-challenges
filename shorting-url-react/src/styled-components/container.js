@@ -8,3 +8,25 @@ export const Container = styled.div`
 	padding-left: 0.75rem;
 	padding-right: 0.75rem;
 `;
+
+export const Column = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: ${props => props.direction || 'row'};
+	justify-content: space-between;
+	@media (max-width: 568px) {
+		flex-direction: column;
+	}
+`;
+
+export const Col = styled.div`
+	flex: 0 0 ${props => props.width || '30%'};
+	width: ${props => props.width || '30%'};
+	margin: 1rem 0;
+
+	@media (max-width: 568px) {
+		order: ${props => props.order};
+		width: 100%;
+		text-align: center;
+	}
+`;
