@@ -4,3 +4,4 @@ export const getShortUrl = async url => {
 
 	return data;
 };
+
