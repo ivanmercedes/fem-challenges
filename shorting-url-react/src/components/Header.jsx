@@ -15,8 +15,8 @@ const Header = () => {
 			<Container>
 				<Column>
 					<Col width='40%'>
-						<Title>More than just shorter links</Title>
-						<Paragraph>
+						<Title sMposition='center'>More than just shorter links</Title>
+						<Paragraph sMposition='center'>
 							Build your brand&apos;s recognition and get detailed insights on
 							how your links are performaing.
 						</Paragraph>

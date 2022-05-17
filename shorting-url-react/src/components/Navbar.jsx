@@ -4,18 +4,20 @@ import { Nav, NavMenu } from '../styled-components/NavbarSt';
 import logo from '../assets/logo.svg';
 import { Col, Column, Container } from '../styled-components/container';
 import { Button } from '../styled-components/Button';
+import ToggleMenu from './ToggleMenu';
 
 const Navbar = () => {
 	return (
 		<Nav>
 			<Container>
-				<Column>
-					<Col width='10%'>
+				<Column row={true}>
+					<Col width='10%' sm='43.333%'>
 						<Image src={logo} />
 					</Col>
 
-					<Col width='80%'>
-						<NavMenu>
+					<Col width='80%' sm='43.333%' position='end'>
+						<ToggleMenu />
+						<NavMenu id='menu'>
 							<ul>
 								<li>
 									<a href='#'>Features</a>
@@ -33,7 +35,9 @@ const Navbar = () => {
 									<a href='#'>Login</a>
 								</li>
 								<li>
-									<Button radius="30px" pa="1rem 2rem">Sign Up</Button>
+									<Button radius='30px' pa='1rem 2rem'>
+										Sign Up
+									</Button>
 								</li>
 							</ul>
 						</NavMenu>

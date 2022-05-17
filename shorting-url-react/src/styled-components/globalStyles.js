@@ -25,6 +25,22 @@ const GlobalStyle = createGlobalStyle`
       color: ${veryDarkBlue};
     }
   }
+
+
+  /* Menu toggle btn */
+  .toggle-menu{
+      display:none;
+    }
+  @media (max-width: 568px){
+    .toggle-menu{
+      display:unset;
+    }
+  }
+  svg[data-show="false"] {
+  	~	 #menu{
+			 right: -500px;
+		 }
+	}
 `;
 
 export default GlobalStyle;

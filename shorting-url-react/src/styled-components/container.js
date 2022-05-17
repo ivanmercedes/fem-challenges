@@ -15,7 +15,7 @@ export const Column = styled.div`
 	flex-direction: ${props => props.direction || 'row'};
 	justify-content: space-between;
 	@media (max-width: 568px) {
-		flex-direction: column;
+		flex-direction: ${props => (props.row ? 'row' : 'column')};
 	}
 `;
 
@@ -26,7 +26,8 @@ export const Col = styled.div`
 
 	@media (max-width: 568px) {
 		order: ${props => props.order};
-		width: 100%;
-		text-align: center;
+		width: ${props => props.sm || '100%'};
+		flex: 0 0 ${props => props.sm || '100%'};
+		text-align: ${props => props.position || 'center'};
 	}
 `;

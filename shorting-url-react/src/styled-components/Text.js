@@ -8,6 +8,7 @@ export const Title = styled.h1`
 
 	@media (max-width: 568px) {
 		font-size: 2.5rem;
+		text-align: ${props => props.sMposition || 'unset'};
 	}
 `;
 
@@ -16,4 +17,7 @@ export const Paragraph = styled.p`
 	margin-top: 0;
 	margin-bottom: 1rem;
 	color: hsl(0, 0%, 75%);
+	@media (max-width: 568px) {
+		text-align: ${props => props.sMposition || 'unset'};
+	}
 `;
